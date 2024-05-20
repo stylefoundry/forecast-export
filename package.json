@@ -1,0 +1,14 @@
+{
+  "name": "forecast-export",
+  "version": "1.0.0",
+  "description": "Export all data from Forecast.it API",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ."
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
