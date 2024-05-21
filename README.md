@@ -1,6 +1,6 @@
 # Forecast export script
 
-This script exports all available data from [Forecast](https://forecast.it).
+This script exports all available data from [Forecast](https://forecast.app).
 
 ## Install
 
