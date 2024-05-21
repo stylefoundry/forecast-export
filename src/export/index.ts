@@ -182,7 +182,6 @@ class Export {
     const tasks = await forecast.tasks.list()
 
     const groupedTasks = inGroupsOf(tasks, 250)
-    console.log(`Exporting ${tasks.length} tasks in ${groupedTasks.length} groups...`)
 
     const tasksWithData = []
 
