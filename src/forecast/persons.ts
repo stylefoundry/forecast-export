@@ -30,6 +30,36 @@ type PersonRecord = {
   is_system_user: boolean;
 }
 
+type PersonLabelRecord = {
+  id: number;
+  first_name: string;
+  last_name: string;
+  email: string;
+  job_title: string;
+  monday: number;
+  tuesday: number;
+  wednesday: number;
+  thursday: number;
+  friday: number;
+  saturday: number;
+  sunday: number;
+  active: boolean;
+  default_role: number;
+  department_id: number;
+  cost: number;
+  language: string;
+  created_by: number;
+  updated_by: number;
+  created_at: string;
+  updated_at: string;
+  client_id: number;
+  holiday_calendar_id: number;
+  start_date: string;
+  end_date: string;
+  permissions: string[];
+  is_system_user: boolean;
+}
+
 type AppNotificationSettings = {
   disable_notifications: boolean;
   notify_on_project_status_change: boolean;
@@ -95,6 +125,10 @@ type PersonNotificationSettings = {
 class Persons extends Module {
   async list() {
     return this.forecast.fetch<PersonRecord[]>('/persons')
+  }
+
+  async labels(personId: number | string) {
+    return this.forecast.fetch<PersonLabelRecord[]>(`/person_labels/${personId}`)
   }
 
   async notificationSettings(personId: number | string) {

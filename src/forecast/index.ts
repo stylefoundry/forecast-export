@@ -21,13 +21,12 @@ import Labels from "./labels";
 import NonProjectTimes from "./nonProjectTime";
 import PersonCostPeriods from "./personCostPeriods";
 import Persons from "./persons";
-import PersonLabels from "./personLabels";
 import PlaceholderAllocations from "./placeholderAllocations";
 import Placeholders from "./placeholders";
 import PriorityLevels from "./priorityLevels";
 import Profiles from "./profiles";
 import Programs from "./programs";
-import ProjectBillTos from "./project_bill_tos";
+import ProjectBillTos from "./projectBillTos";
 import RateCards from "./rateCards";
 import Roles from "./roles";
 import SkillCategories from "./skillCategories";
@@ -36,7 +35,7 @@ import SkillPersons from "./skillPersons";
 import Skills from "./skills";
 import Tasks from "./tasks";
 import Teams from "./teams";
-import TimeRegistrations from "./time_registrations";
+import TimeRegistrations from "./timeRegistrations";
 
 export class Forecast {
   allocations: Allocations
@@ -58,7 +57,6 @@ export class Forecast {
   labels: Labels
   nonProjectTimes: NonProjectTimes
   personCostPeriods: PersonCostPeriods
-  personLabels: PersonLabels
   persons: Persons
   placeholderAllocations: PlaceholderAllocations
   placeholders: Placeholders
@@ -97,7 +95,6 @@ export class Forecast {
     this.labels = new Labels(this)
     this.nonProjectTimes = new NonProjectTimes(this)
     this.personCostPeriods = new PersonCostPeriods(this)
-    this.personLabels = new PersonLabels(this)
     this.persons = new Persons(this)
     this.placeholderAllocations = new PlaceholderAllocations(this)
     this.placeholders = new Placeholders(this)
